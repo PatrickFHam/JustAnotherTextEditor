@@ -11,7 +11,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js',
+      install: './src/js/install.js'
       // editor: './src/js/editor.js',
       // header: './src/js/header.js'
     },
@@ -26,12 +26,6 @@ module.exports = () => {
         title: 'Jate TITLE'
       }),
      
-      // Injects our custom service worker
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
-      }),
-
       // Creates a manifest.json file.
       new WebpackPwaManifest({
         fingerprints: false,
@@ -51,6 +45,14 @@ module.exports = () => {
           },
         ],
       }),
+
+      // Injects our custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
+      
     ],
 
     module: {
