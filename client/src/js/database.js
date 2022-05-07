@@ -25,7 +25,7 @@ export const putDb = async (content) => {
 };
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async (e) => {
+export const getDb = async () => {
   // console.error('getDb not implemented')  THIS IS THE INITIAL ERROR BEFORE I BUILT THIS FUNCTION
   console.log('GET from the database');
   const jateDb = await openDB('jate', 1);

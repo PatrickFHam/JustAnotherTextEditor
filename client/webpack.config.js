@@ -12,8 +12,6 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
-      // editor: './src/js/editor.js',
-      // header: './src/js/header.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -22,21 +20,20 @@ module.exports = () => {
     plugins: [
       // Webpack plugin that generates our html file and injects our bundles. 
       new HtmlWebpackPlugin({
-        template: './index.html',
-        title: 'Jate TITLE'
+        template: './index.html'
       }),
      
       // Creates a manifest.json file.
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
-        name: 'Challenge PWA',
-        short_name: 'PWA Challenge',
+        name: 'JATE',
+        short_name: 'JATE',
         description: 'Still learning PWAs!',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
+        background_color: '#1e1e1e',
+        theme_color: '#1e1e1e',
         start_url: '/',
         publicPath: '/',
+        fingerprints: false,
+        inject: true,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
