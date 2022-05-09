@@ -20,7 +20,14 @@ module.exports = () => {
     plugins: [
       // Webpack plugin that generates our html file and injects our bundles. 
       new HtmlWebpackPlugin({
-        template: './index.html'
+        template: './index.html',
+        title: 'JATE'
+      }),
+
+      // Injects our custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
       }),
      
       // Creates a manifest.json file.
@@ -43,11 +50,7 @@ module.exports = () => {
         ],
       }),
 
-      // Injects our custom service worker
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
-      }),
+      
 
       
     ],
