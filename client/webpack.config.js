@@ -30,8 +30,8 @@ module.exports = () => {
         description: 'Still learning PWAs!',
         background_color: '#1e1e1e',
         theme_color: '#1e1e1e',
-        start_url: '/',
-        publicPath: '/',
+        start_url: './',
+        publicPath: './',
         fingerprints: false,
         inject: true,
         icons: [
