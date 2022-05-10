@@ -1,20 +1,24 @@
 import { openDB } from 'idb';
 
+// initdb ... Initializes the database.
 const initdb = async () =>
+  // uses the database named 'jate'
+  // uses version 1
+  // looks for a database already named 'jate' and uses it, or creates a new one
   openDB('jate', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
         console.log('jate database already exists');
         return;
       }
+      // makes 'id' the keyPath in the newly-created database
       db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
       console.log('jate database created');
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+// ADDS data to the database.
 export const putDb = async (content) => {
-  // console.error('putDb not implemented')  THIS IS THE INITIAL ERROR BEFORE I BUILT THIS FUNCTION
   console.log('Post/PUT to the database');
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jate', 'readwrite');
@@ -24,9 +28,8 @@ export const putDb = async (content) => {
   console.log('🚀 - data saved to the jate database', result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+// GETS all data from the database.
 export const getDb = async () => {
-  // console.error('getDb not implemented')  THIS IS THE INITIAL ERROR BEFORE I BUILT THIS FUNCTION
   console.log('GET from the database');
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jate', 'readonly');
@@ -34,12 +37,12 @@ export const getDb = async () => {
   const request = store.get(1);
   const result = await request;
   console.log('result.value', result);
-  // return result;
   result
     ? console.log('Data retrieved from database')
     : console.log('Data not found in the database.');
-
+  // If there is a result, the return will show its value.
   return result?.value;
 };
 
+// calls initialize-function on load
 initdb();
