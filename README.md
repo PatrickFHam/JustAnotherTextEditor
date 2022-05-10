@@ -23,7 +23,6 @@ SO THAT I can reliably retrieve them for later use
 ```
 
 
-
 ## Description 
 
 - **What was your motivation?** It is nice to have a 'scratchpad' handy, so you can jot down your ideas, even while not connected to the Internet... so that you can come back to those ideas later.
@@ -73,8 +72,6 @@ VERY Simple... use this as a scratchpad.  You may type or paste snippets into JA
 * Express.js
 * Webpack
 * Heroku
-
-
 
 
 ## Credits
