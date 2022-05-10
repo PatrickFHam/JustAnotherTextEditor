@@ -1,11 +1,14 @@
+// all imports
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+// sets the main div to blank
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
+// creates a div with the classname "spinner"
 const loadSpinner = () => {
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');
