@@ -5,9 +5,10 @@
 
 ## Table of contents
 * [User Story](#user-story)
+* [Description](#description)
 * [Live URL](#live-url)
 * [Installation](#installation)
-* [Description](#description)
+* [Usage](#usage)
 * [Technologies Used](#technologies-used)
 * [Credits](#credits)
 * [Questions](#questions)
@@ -34,16 +35,37 @@ SO THAT I can reliably retrieve them for later use
 
 
 
-## Installation
-1. Clone the repository to your local machine.
-2. Using Terminal, navigate to the repo's root directory ... which is NOT in the client or server folders.
-3. Using Terminal, use the command `npm install`
-4. Wait for all dependencies to be installed.
-5. Using Terminal, use the comman `npm start`
-6. You'll see the port number displayed, which should be 3000.
-7. Using your web browser, navigate to `localhost:3000`
-8. You may use the web page to use the app, even without a web connection, OR ...
-9. You may click the INSTALL button at the top of the page, to save the web-app to your local machine.  It will be usable even if you don't have a web connection.
+## Installation, if not using the Live-Link
+1. Clone the repository to your local machine. <br>
+
+2. Using Terminal, navigate to the repo's root directory ... which is NOT in the client or server folders. <br>
+3. Using Terminal, use the command `npm install` <br>
+![NAV to Folder and NPM INSTALL](./screenshots/nav-to-folder-npm-install.png)
+
+4. Wait for all dependencies to be installed. <br>
+
+5. Using Terminal, use the comman `npm start` <br>
+![NPM START](./screenshots/npm-start.png)
+
+6. You'll see the port number displayed, which should be 3000. <br>
+![SEE PORT NUMBER](./screenshots/see-port-number.png)
+
+7. Using your web browser, navigate to `localhost:3000` <br>
+![Open Browser](./screenshots/open-browser-localhost.png)
+
+8. You may use the web page to use the app, even without a web connection, OR ... <br>
+![Input, Close, Re-Open](./screenshots/input-close-reopen.png)
+
+9. You may click the INSTALL button at the top of the page, to save the web-app to your local machine.  It will be usable even if you don't have a web connection. <br>
+![Install PWA](./screenshots/install-pwa.png)
+![Confirm Install PWA](./screenshots/confirm-install-pwa.png)
+![PWA Available in Windows](./screenshots/pwa-available-in-windows.png)
+
+
+## Usage
+VERY Simple... use this as a scratchpad.  You may type or paste snippets into JATE, close it, and when you re-open it, all your snippets are still there... even offline!
+
+
 
 
 ## Technologies Used 
