@@ -1,3 +1,4 @@
+// all imports
 const { warmStrategyCache } = require('workbox-recipes');
 const { StaleWhileRevalidate, CacheFirst } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
@@ -7,6 +8,7 @@ const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
+// Defines the pageCache options. 
 const pageCache = new CacheFirst({
   cacheName: 'page-cache',
   plugins: [
@@ -19,6 +21,7 @@ const pageCache = new CacheFirst({
   ],
 });
 
+// Executes the pageCache options.
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
@@ -26,7 +29,7 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// ASSET CACHEING
+// Asset Cache
 registerRoute(({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
     cacheName: 'asset-cache',
