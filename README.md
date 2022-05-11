@@ -31,6 +31,7 @@ SO THAT I can reliably retrieve them for later use
 
 
 ## Live URL
+Use the Live Application -- https://pfh-just-another-text-editor.herokuapp.com/
 
 
 
